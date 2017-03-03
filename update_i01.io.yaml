@@ -1,0 +1,7 @@
+---
+- hosts: i01
+  tasks:
+  - name: update i01.io
+    command: git pull
+    args:
+      chdir: /var/www/i01.io/
