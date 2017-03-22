@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index - lightning1141's blog</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="My blog: some notes and readings">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+
+        <!-- MathJax -->
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = localStorage.getItem('theme');
+            if (theme == null) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = localStorage.getItem('sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li class="affix"><a href="about/index.html" class="active">Index</a></li><li class="spacer"></li><li><a href="rust/codewars.html"><strong>1.</strong> Codewars</a></li><li><ul class="section"><li><a href="rust/color_choice.html"><strong>1.1.</strong> Color Choice</a></li><li class="spacer"></li></ul></li><li><a href="about/me.html">About</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">lightning1141's blog</h1>
+
+                    <div class="right-buttons">
+                        <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="about/index.html#书籍" name="书籍"><h3>书籍</h3></a>
+<ul>
+<li><a href="about/index.html#!show/2015-07-21-books">豆瓣读书</a></li>
+<li>Python
+<ul>
+<li><a href="https://github.com/yasoob/intermediatePython">Intermediate Python</a></li>
+</ul>
+</li>
+<li>Rust
+<ul>
+<li><a href="https://rust-lang.github.io/book/">The Rust Programming Language</a> (new version)</li>
+<li><a href="https://doc.rust-lang.org/book/README.html">The Rust Programming Language</a> (old version)</li>
+<li><a href="http://rustbyexample.com/index.html">Rust by Example</a></li>
+<li><a href="http://zsiciarz.github.io/24daysofrust/index.html">24 days of Rust</a></li>
+</ul>
+</li>
+<li>其他
+<ul>
+<li>None</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="about/index.html#练习" name="练习"><h3>练习</h3></a>
+<ul>
+<li><a href="https://www.codewars.com/users/lightning1141/"><img src="https://www.codewars.com/users/lightning1141/badges/small" alt="codewars" /></a></li>
+</ul>
+<a class="header" href="about/index.html#作品" name="作品"><h3>作品</h3></a>
+<ul>
+<li>暂无
+<blockquote>
+<p>最近在用 Rust 造 OS 跟 Minecraft 的轮子</p>
+</blockquote>
+</li>
+</ul>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+
+                
+                    <a href="rust/codewars.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+
+            
+                <a href="rust/codewars.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

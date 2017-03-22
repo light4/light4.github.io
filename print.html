@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>About - lightning1141's blog</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="My blog: some notes and readings">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+
+        <!-- MathJax -->
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = localStorage.getItem('theme');
+            if (theme == null) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = localStorage.getItem('sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li class="affix"><a href="about/index.html">Index</a></li><li class="spacer"></li><li><a href="rust/codewars.html"><strong>1.</strong> Codewars</a></li><li><ul class="section"><li><a href="rust/color_choice.html"><strong>1.1.</strong> Color Choice</a></li><li class="spacer"></li></ul></li><li><a href="about/me.html">About</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">lightning1141's blog</h1>
+
+                    <div class="right-buttons">
+                        <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="print.html#书籍" name="书籍"><h3>书籍</h3></a>
+<ul>
+<li><a href="print.html#!show/2015-07-21-books">豆瓣读书</a></li>
+<li>Python
+<ul>
+<li><a href="https://github.com/yasoob/intermediatePython">Intermediate Python</a></li>
+</ul>
+</li>
+<li>Rust
+<ul>
+<li><a href="https://rust-lang.github.io/book/">The Rust Programming Language</a> (new version)</li>
+<li><a href="https://doc.rust-lang.org/book/README.html">The Rust Programming Language</a> (old version)</li>
+<li><a href="http://rustbyexample.com/index.html">Rust by Example</a></li>
+<li><a href="http://zsiciarz.github.io/24daysofrust/index.html">24 days of Rust</a></li>
+</ul>
+</li>
+<li>其他
+<ul>
+<li>None</li>
+</ul>
+</li>
+</ul>
+<a class="header" href="print.html#练习" name="练习"><h3>练习</h3></a>
+<ul>
+<li><a href="https://www.codewars.com/users/lightning1141/"><img src="https://www.codewars.com/users/lightning1141/badges/small" alt="codewars" /></a></li>
+</ul>
+<a class="header" href="print.html#作品" name="作品"><h3>作品</h3></a>
+<ul>
+<li>暂无
+<blockquote>
+<p>最近在用 Rust 造 OS 跟 Minecraft 的轮子</p>
+</blockquote>
+</li>
+</ul>
+<a class="header" href="print.html#codewars" name="codewars"><h1>Codewars</h1></a>
+<p><a href="https://www.codewars.com">Codewars</a> 还是挺不错的, 这里存放一些解题步骤和想法.</p>
+<a class="header" href="print.html#用-rust-刷-codewars-之-color-choice" name="用-rust-刷-codewars-之-color-choice"><h1>用 Rust 刷 Codewars 之 Color choice</h1></a>
+<a class="header" href="print.html#a-hrefhttpswwwcodewarscomkata55be10de92aad5ef28000023问题描述a" name="a-hrefhttpswwwcodewarscomkata55be10de92aad5ef28000023问题描述a"><h3><a href="https://www.codewars.com/kata/55be10de92aad5ef28000023">问题描述</a></h3></a>
+<blockquote>
+<p>以下为本人简单翻译的描述</p>
+</blockquote>
+<p>组合数: 举个例子, 从 52 个卡牌中抽取 5 个卡牌, 会有 2,598,960 种情况, 这个数就是组合数.</p>
+<p>在数学中, 从 n 个元素中取出的 x 个组合被称为 n 和 x 的二项式系数, 或者称为组合数 <code>C(n, x)</code>. n 个数计算第 x 个数 大小的公式:
+<code>m = n! / ( x! * (n - x)!)</code>.
+其中 <code>!</code> 是阶乘运算符.</p>
+<p>现在假设你是一个着名的海报设计师和画家. 你被要求提供 6 张具有相同设计的海报, 每张海报用 2 种颜色. 海报必须有不同的颜色组合, 你有 4 种可供选择的颜色: 红色, 蓝色, 黄色, 绿色. 那么你可以为每张海报选择多少种颜色?</p>
+<p>答案是 2, 因为组合数 <code>C(4, 2) = 6</code>. 组合将是: {红, 蓝}, {红, 黄}, {红, 绿}, {蓝, 黄}, {蓝, 绿}, {黄, 绿 }.</p>
+<p>现在同样的问题, 但是你要提供 35 张海报, 有 7 种颜色可用. 每张海报有多少种颜色? 如果你用上述公式计算 <code>C(7, 2)</code>, 会得到 21.  但是 35 张海报如果只有 21 种组合是不够用的. 如果你采取 <code>C(7, 5)</code>, 你同样会得到21. 幸运的是, 如果你采用 <code>C(7, 3)</code> 或者 <code>C(7, 4)</code>, 正好是 35, 所以每个海报将有 3 种或 5 种不同颜色的组合. 这种情况你会采取 3 种颜色, 因为它更便宜.</p>
+<p>问题如下:</p>
+<p>知道 m (海报的数量), 知道 n (可用颜色的总数), 找出一个 x (每个海报的颜色数量, 使得每个海报具有唯一的颜色组合, 并且组合的数量与海报的数量是完全相同的).</p>
+<p>换句话说, 对于给定的 m, n, 我们必须找到满足公式 <code>C(n, x) = m ★</code> 的 x<code>(m &gt;= 0且 n &gt; 0)</code>. 如果 x 有多个解, 则给出最小的 x. 当给出的 m 没有 x 满足<code>等式 ★</code> 时, 返回 -1.</p>
+<p>例子:</p>
+<pre><code class="language-Rust">checkchoose(6, 4) --&gt; 2
+checkchoose(4, 4) --&gt; 1
+checkchoose(4, 2) --&gt; -1
+checkchoose(35, 7) --&gt; 3
+checkchoose(36, 7) --&gt; -1
+
+a = 47129212243960
+checkchoose(a, 50) --&gt; 20
+checkchoose(a + 1, 50) --&gt; -1
+</code></pre>
+<p><code>clojure: Use big integers in the calculation of C(n, k)!</code></p>
+<a class="header" href="print.html#题解-1" name="题解-1"><h3>题解 1</h3></a>
+<p>看到这题的时候感觉很简单, 一个阶乘公式, 一个组合数公式, 然后在 main 函数中组合起来就行了.</p>
+<p>代码如下:</p>
+<pre><code class="language-Rust">fn check_choose(m: u64, n: u64) -&gt; i64 {
+    let mut result: i64 = -1;
+
+    for x in 1..n {
+        if get_choices(n, x) == m {
+            result = x as i64;
+            break;
+        }
+    }
+    result
+}
+
+fn get_choices (n: u64, x: u64) -&gt; u64 {
+    factorial(n) / factorial(x) / factorial(n - x)
+}
+
+fn factorial(number: u64) -&gt; u64 {
+    fn fac_iter(nth: u64, product: u64) -&gt; u64 {
+        if nth &lt;= 1 {
+            product
+        } else {
+            fac_iter(nth - 1, nth * product)
+        }
+    }
+    fac_iter(number, 1)
+}
+</code></pre>
+<p>很简单嘛, 连阶乘我都优化了下递归.
+复制粘贴, 跑下例子, 没问题. 提交!
+然后就报 Overflow 了. ಥ_ಥ</p>
+<a class="header" href="print.html#题解-2" name="题解-2"><h3>题解 2</h3></a>
+<p>自己测试一下, 发现数字小的时候没问题, 大了之后乘法就会溢出.
+这个简单, 改成用大数就行了, 然后发现 <code>u64</code> 在标准库里是最大的, 但是 crates 上有 bigint, 问题的提示也这么说. 我就改成了下边的代码(只列出了 factorial).</p>
+<pre><code class="language-Rust">fn factorial(number: u64) -&gt; BigUint {
+    let number = number.to_biguint().unwrap();
+    fn fac_iter(nth: BigUint, product: BigUint) -&gt; BigUint {
+        if nth &lt;= One::one() {
+            product
+        } else {
+            fac_iter(nth.clone().sub(1.to_biguint().unwrap()), nth * product)
+        }
+    }
+    fac_iter(number, One::one())
+}
+</code></pre>
+<p>提交测试, 发现用不了第三方库, 想想也知道. ಥ_ಥ</p>
+<a class="header" href="print.html#题解-3" name="题解-3"><h3>题解 3</h3></a>
+<p>既然用不了第三方库, 那容我来优化一下 <code>factorial</code> 函数.
+本来想实现 <code>factorial</code> 返回一个惰性值, 然后在 <code>get_choices</code> 函数里怎么计算不会溢出. 然后发现自己想错了, 直接优化 <code>get_choices</code>, 不要用 <code>factorial</code> 函数就行了. 几个加减乘除, <code>u64</code> 不会溢出.</p>
+<p>代码如下 (未列出 <code>check_choose</code>):</p>
+<pre><code class="language-Rust">fn get_choices (n: u64, x: u64) -&gt; u64 {
+    if x == 1 {
+        n
+    } else {
+        get_choices(n, x - 1) * (n - x + 1) / x
+    }
+}
+</code></pre>
+<p>递归实现了, 复制粘贴, 测试通过, 提交!</p>
+<a class="header" href="print.html#题解-4" name="题解-4"><h3>题解 4</h3></a>
+<p>上边用递归实现了, 但是本着完美主义的心, 必须优化一下啊.
+下边是优化后的代码, <code>check_choose</code> 也稍优化.</p>
+<p>最终代码:</p>
+<pre><code class="language-Rust">fn check_choose(m: u64, n: u64) -&gt; i64 {
+    let mut result: i64 = -1;
+    let h = (n + 2) / 2;
+
+    for x in 1..h {
+        if get_choices(n, x) == m {
+            result = x as i64;
+            break;
+        }
+    }
+    result
+}
+
+fn get_choices(n: u64, x: u64) -&gt; u64 {
+    fn get_choices_iter(n:u64, x: u64, c: u64, r: u64) -&gt; u64 {
+        let r = r * (n - c + 1) / c;
+        if c &lt; x {
+            get_choices_iter(n, x, c + 1, r)
+        } else {
+            r
+        }
+    }
+    get_choices_iter(n, x, 1, 1)
+}
+</code></pre>
+<a class="header" href="print.html#总结" name="总结"><h3>总结</h3></a>
+<p>上边 <code>get_choices</code> 依然不完美, <code>get_choices_iter</code> 参数使用了外部变量 n, x. 总感觉可以去掉, 写成 closure.
+我使用匿名函数时发现没法递归了, 暂时不知道该怎么办了.</p>
+<p>代码其实就是一点一点优化过来的, 有些书上告诉我们要想好再写代码, 有些书上又警告我们不要过度设计, 但是这个度在哪里
+只能靠多谢代码来锻炼了, 增加一些经验, 更容易发现问题的关键所在.</p>
+<a class="header" href="print.html#about-me-" name="about-me-"><h2>About me :</h2></a>
+<hr />
+<a class="header" href="print.html#nickname-" name="nickname-"><h3>Nickname :</h3></a>
+<ul>
+<li>lightning1141</li>
+</ul>
+<a class="header" href="print.html#email-" name="email-"><h3>Email :</h3></a>
+<ul>
+<li>Nickname @ gmail</li>
+<li>Nickname @ 163</li>
+</ul>
+<a class="header" href="print.html#个人说明" name="个人说明"><h3>个人说明:</h3></a>
+<ul>
+<li>Advocating freedom</li>
+<li>To be a <a href="http://www.catb.org/%7Eesr/faqs/hacker-howto.html" title="How to become a hacker">Hacker</a></li>
+</ul>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+
+                
+
+            </div>
+
+            
+
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>
