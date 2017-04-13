@@ -1,6 +1,6 @@
 ### 书籍
 
-* [豆瓣读书](#!show/2015-07-21-books)
+* [豆瓣读书](read/douban.md)
 * Python
   - [Intermediate Python](https://github.com/yasoob/intermediatePython)
 * Rust
