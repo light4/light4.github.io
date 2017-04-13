@@ -4,6 +4,8 @@ ____
 
 ### 读过
 
+* [Think Python](https://book.douban.com/subject/26634683/)
+* [Stories of Your Life and Others](https://book.douban.com/subject/26862342/)
 * [Python Cookbook 中文版，第 3 版](https://book.douban.com/subject/26381341/)
 * [Python Cookbook](https://book.douban.com/subject/20491078/)
 * [猫城记](https://book.douban.com/subject/3345595/)
@@ -97,6 +99,7 @@ ____
 
 ### 在读
 
+* [Flask Web Development](https://book.douban.com/subject/25814739/)
 * [30天自制操作系统](https://book.douban.com/subject/11530329/)
 * [The C Programming Language, 2nd Eition](https://book.douban.com/subject/1984292/)
 * [图解TCP/IP : 第5版](https://book.douban.com/subject/24737674/)
@@ -151,7 +154,7 @@ ____
 * [计算机程序的构造和解释](https://book.douban.com/subject/1148282/)
 * [离散数学及其应用（原书第6版）](https://book.douban.com/subject/6558200/)
 * [全球通史(下)](https://book.douban.com/subject/1922246/)
-* [全球通史(上)](https://book.douban.com/subject/1922216/)
+* [全球通史](https://book.douban.com/subject/1922216/)
 * [睡美人](https://book.douban.com/subject/1205778/)
 * [追风筝的人](https://book.douban.com/subject/1770782/)
 * [发条女孩](https://book.douban.com/subject/10763170/)
@@ -166,6 +169,8 @@ ____
 
 ### 想读
 
+* [从一元一次方程到伽罗瓦理论](https://book.douban.com/subject/11637344/)
+* [并发的艺术](https://book.douban.com/subject/4937268/)
 * [The Practice of Programming](https://book.douban.com/subject/1459281/)
 * [程序设计实践](https://book.douban.com/subject/1173548/)
 * [The Garbage Collection Handbook](https://book.douban.com/subject/6809987/)
