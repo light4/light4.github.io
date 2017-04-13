@@ -1,4 +1,4 @@
-### Readings
+# Read
 
 * [豆瓣读书](read/douban.html)
 * Python
@@ -8,14 +8,5 @@
   - [The Rust Programming Language](https://doc.rust-lang.org/book/README.html) (old version)
   - [Rust by Example](http://rustbyexample.com/index.html)
   - [24 days of Rust](http://zsiciarz.github.io/24daysofrust/index.html)
-* Other
+* 其他
   - None
-
-### Code Training
-
-* [![codewars](https://www.codewars.com/users/lightning1141/badges/small)](https://www.codewars.com/users/lightning1141/)
-
-### Works
-
-* None
-  > 最近在用 Rust 造 OS 跟 Minecraft 的轮子
