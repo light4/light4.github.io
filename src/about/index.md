@@ -11,11 +11,11 @@
 * Other
   - None
 
-### Code Training
+### Training
 
-* [![codewars](https://www.codewars.com/users/lightning1141/badges/small)](https://www.codewars.com/users/lightning1141/)
+* [![Codewars](https://www.codewars.com/users/lightning1141/badges/small)](https://www.codewars.com/users/lightning1141/)
 
 ### Works
 
 * None
-  > 最近在用 Rust 造 OS 跟 Minecraft 的轮子
+  > Using Rust to write an OS and a game like Minecraft
