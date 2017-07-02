@@ -8,6 +8,7 @@
   - [The Rust Programming Language](https://doc.rust-lang.org/book/README.html) (old version)
   - [Rust by Example](http://rustbyexample.com/index.html)
   - [24 days of Rust](http://zsiciarz.github.io/24daysofrust/index.html)
+  - [Learn Rust by writing Entirely Too Many linked lists](https://github.com/rust-unofficial/too-many-lists)
 * Other
   - None
 
