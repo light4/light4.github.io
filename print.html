@@ -10,7 +10,8 @@
         <base href="">
 
         <link rel="stylesheet" href="book.css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
 
         <link rel="shortcut icon" href="favicon.png">
 
@@ -21,7 +22,7 @@
         <link rel="stylesheet" href="tomorrow-night.css">
 
         <!-- MathJax -->
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
         <!-- Fetch JQuery from CDN but have a local fallback -->
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -67,7 +68,7 @@
                 </div>
 
                 <div id="content" class="content">
-                    <a class="header" href="print.html#readings" name="readings"><h3>Readings</h3></a>
+                    <a class="header" href="print.html#readings" id="readings"><h3>Readings</h3></a>
 <ul>
 <li><a href="read/douban.html">豆瓣读书</a></li>
 <li>Python
@@ -89,11 +90,11 @@
 </ul>
 </li>
 </ul>
-<a class="header" href="print.html#training" name="training"><h3>Training</h3></a>
+<a class="header" href="print.html#training" id="training"><h3>Training</h3></a>
 <ul>
 <li><a href="https://www.codewars.com/users/lightning1141/"><img src="https://www.codewars.com/users/lightning1141/badges/small" alt="Codewars" /></a></li>
 </ul>
-<a class="header" href="print.html#works" name="works"><h3>Works</h3></a>
+<a class="header" href="print.html#works" id="works"><h3>Works</h3></a>
 <ul>
 <li>None
 <blockquote>
@@ -101,10 +102,10 @@
 </blockquote>
 </li>
 </ul>
-<a class="header" href="print.html#codewars" name="codewars"><h1>Codewars</h1></a>
+<a class="header" href="print.html#codewars" id="codewars"><h1>Codewars</h1></a>
 <p><a href="https://www.codewars.com">Codewars</a> 还是挺不错的, 这里存放一些解题步骤和想法.</p>
-<a class="header" href="print.html#用-rust-刷-codewars-之-color-choice" name="用-rust-刷-codewars-之-color-choice"><h1>用 Rust 刷 Codewars 之 Color choice</h1></a>
-<a class="header" href="print.html#a-hrefhttpswwwcodewarscomkata55be10de92aad5ef28000023问题描述a" name="a-hrefhttpswwwcodewarscomkata55be10de92aad5ef28000023问题描述a"><h3><a href="https://www.codewars.com/kata/55be10de92aad5ef28000023">问题描述</a></h3></a>
+<a class="header" href="print.html#用-rust-刷-codewars-之-color-choice" id="用-rust-刷-codewars-之-color-choice"><h1>用 Rust 刷 Codewars 之 Color choice</h1></a>
+<a class="header" href="print.html#a-hrefhttpswwwcodewarscomkata55be10de92aad5ef28000023问题描述a" id="a-hrefhttpswwwcodewarscomkata55be10de92aad5ef28000023问题描述a"><h3><a href="https://www.codewars.com/kata/55be10de92aad5ef28000023">问题描述</a></h3></a>
 <blockquote>
 <p>以下为本人简单翻译的描述</p>
 </blockquote>
@@ -130,7 +131,7 @@ checkchoose(a, 50) --&gt; 20
 checkchoose(a + 1, 50) --&gt; -1
 </code></pre>
 <p><code>clojure: Use big integers in the calculation of C(n, k)!</code></p>
-<a class="header" href="print.html#题解-1" name="题解-1"><h3>题解 1</h3></a>
+<a class="header" href="print.html#题解-1" id="题解-1"><h3>题解 1</h3></a>
 <p>看到这题的时候感觉很简单, 一个阶乘公式, 一个组合数公式, 然后在 main 函数中组合起来就行了.</p>
 <p>代码如下:</p>
 <pre><code class="language-Rust">fn check_choose(m: u64, n: u64) -&gt; i64 {
@@ -163,7 +164,7 @@ fn factorial(number: u64) -&gt; u64 {
 <p>很简单嘛, 连阶乘我都优化了下递归.
 复制粘贴, 跑下例子, 没问题. 提交!
 然后就报 Overflow 了. ಥ_ಥ</p>
-<a class="header" href="print.html#题解-2" name="题解-2"><h3>题解 2</h3></a>
+<a class="header" href="print.html#题解-2" id="题解-2"><h3>题解 2</h3></a>
 <p>自己测试一下, 发现数字小的时候没问题, 大了之后乘法就会溢出.
 这个简单, 改成用大数就行了, 然后发现 <code>u64</code> 在标准库里是最大的, 但是 crates 上有 bigint, 问题的提示也这么说. 我就改成了下边的代码(只列出了 factorial).</p>
 <pre><code class="language-Rust">fn factorial(number: u64) -&gt; BigUint {
@@ -179,7 +180,7 @@ fn factorial(number: u64) -&gt; u64 {
 }
 </code></pre>
 <p>提交测试, 发现用不了第三方库, 想想也知道. ಥ_ಥ</p>
-<a class="header" href="print.html#题解-3" name="题解-3"><h3>题解 3</h3></a>
+<a class="header" href="print.html#题解-3" id="题解-3"><h3>题解 3</h3></a>
 <p>既然用不了第三方库, 那容我来优化一下 <code>factorial</code> 函数.
 本来想实现 <code>factorial</code> 返回一个惰性值, 然后在 <code>get_choices</code> 函数里怎么计算不会溢出. 然后发现自己想错了, 直接优化 <code>get_choices</code>, 不要用 <code>factorial</code> 函数就行了. 几个加减乘除, <code>u64</code> 不会溢出.</p>
 <p>代码如下 (未列出 <code>check_choose</code>):</p>
@@ -192,7 +193,7 @@ fn factorial(number: u64) -&gt; u64 {
 }
 </code></pre>
 <p>递归实现了, 复制粘贴, 测试通过, 提交!</p>
-<a class="header" href="print.html#题解-4" name="题解-4"><h3>题解 4</h3></a>
+<a class="header" href="print.html#题解-4" id="题解-4"><h3>题解 4</h3></a>
 <p>上边用递归实现了, 但是本着完美主义的心, 必须优化一下啊.
 下边是优化后的代码, <code>check_choose</code> 也稍优化.</p>
 <p>最终代码:</p>
@@ -221,12 +222,12 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
     get_choices_iter(n, x, 1, 1)
 }
 </code></pre>
-<a class="header" href="print.html#总结" name="总结"><h3>总结</h3></a>
+<a class="header" href="print.html#总结" id="总结"><h3>总结</h3></a>
 <p>上边 <code>get_choices</code> 依然不完美, <code>get_choices_iter</code> 参数使用了外部变量 n, x. 总感觉可以去掉, 写成 closure.
 我使用匿名函数时发现没法递归了, 暂时不知道该怎么办了.</p>
 <p>代码其实就是一点一点优化过来的, 有些书上告诉我们要想好再写代码, 有些书上又警告我们不要过度设计, 但是这个度在哪里
 只能靠多谢代码来锻炼了, 增加一些经验, 更容易发现问题的关键所在.</p>
-<a class="header" href="print.html#read" name="read"><h1>Read</h1></a>
+<a class="header" href="print.html#read" id="read"><h1>Read</h1></a>
 <ul>
 <li><a href="read/douban.html">豆瓣读书</a></li>
 <li>Python
@@ -240,6 +241,7 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://doc.rust-lang.org/book/README.html">The Rust Programming Language</a> (old version)</li>
 <li><a href="http://rustbyexample.com/index.html">Rust by Example</a></li>
 <li><a href="http://zsiciarz.github.io/24daysofrust/index.html">24 days of Rust</a></li>
+<li><a href="https://github.com/rust-unofficial/too-many-lists">Learn Rust by writing Entirely Too Many linked lists</a></li>
 </ul>
 </li>
 <li>其他
@@ -250,8 +252,21 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 </ul>
 <p><a href="http://book.douban.com/people/lightning1141/">lightning1141的读书主页</a></p>
 <hr />
-<a class="header" href="print.html#读过" name="读过"><h3>读过</h3></a>
+<a class="header" href="print.html#读过" id="读过"><h3>读过</h3></a>
 <ul>
+<li><a href="https://book.douban.com/subject/11605558/">六道众生</a></li>
+<li><a href="https://book.douban.com/subject/1161852/">天意</a></li>
+<li><a href="https://book.douban.com/subject/26367569/">福尔摩斯探案集4</a></li>
+<li><a href="https://book.douban.com/subject/26367568/">福尔摩斯探案集3</a></li>
+<li><a href="https://book.douban.com/subject/26367567/">福尔摩斯探案集2</a></li>
+<li><a href="https://book.douban.com/subject/26344856/">福尔摩斯探案集1</a></li>
+<li><a href="https://book.douban.com/subject/25884108/">程序员的呐喊</a></li>
+<li><a href="https://book.douban.com/subject/1203426/">人间词话</a></li>
+<li><a href="https://book.douban.com/subject/1013208/">如何阅读一本书</a></li>
+<li><a href="https://book.douban.com/subject/4742954/">基度山恩仇记</a></li>
+<li><a href="https://book.douban.com/subject/26575679/">当我谈跑步时，我谈些什么（2015典藏版）</a></li>
+<li><a href="https://book.douban.com/subject/26295448/">你一生的故事</a></li>
+<li><a href="https://book.douban.com/subject/4822685/">编码</a></li>
 <li><a href="https://book.douban.com/subject/26634683/">Think Python</a></li>
 <li><a href="https://book.douban.com/subject/26862342/">Stories of Your Life and Others</a></li>
 <li><a href="https://book.douban.com/subject/26381341/">Python Cookbook 中文版，第 3 版</a></li>
@@ -345,8 +360,14 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/1088065/">阿Q正传</a></li>
 <li><a href="https://book.douban.com/subject/6082808/">百年孤独</a></li>
 </ul>
-<a class="header" href="print.html#在读" name="在读"><h3>在读</h3></a>
+<a class="header" href="print.html#在读" id="在读"><h3>在读</h3></a>
 <ul>
+<li><a href="https://book.douban.com/subject/3004255/">编程之美</a></li>
+<li><a href="https://book.douban.com/subject/26256849/">Haskell并行与并发编程</a></li>
+<li><a href="https://book.douban.com/subject/20432061/">算法导论（原书第3版）</a></li>
+<li><a href="https://book.douban.com/subject/24882289/">机器人短篇全集</a></li>
+<li><a href="https://book.douban.com/subject/26994394/">流利的Python语言 (影印版)</a></li>
+<li><a href="https://book.douban.com/subject/26836970/">沙丘</a></li>
 <li><a href="https://book.douban.com/subject/25814739/">Flask Web Development</a></li>
 <li><a href="https://book.douban.com/subject/11530329/">30天自制操作系统</a></li>
 <li><a href="https://book.douban.com/subject/1984292/">The C Programming Language, 2nd Eition</a></li>
@@ -367,7 +388,6 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/4262627/">重构</a></li>
 <li><a href="https://book.douban.com/subject/1451622/">Structure and Interpretation of Computer Programs - 2nd Editio...</a></li>
 <li><a href="https://book.douban.com/subject/26337939/">七周七并发模型</a></li>
-<li><a href="https://book.douban.com/subject/26575679/">当我谈跑步时，我谈些什么（2015典藏版）</a></li>
 <li><a href="https://book.douban.com/subject/3784383/">Harry Potter Paperback Box Set</a></li>
 <li><a href="https://book.douban.com/subject/26640135/">Python Web开发：测试驱动方法</a></li>
 <li><a href="https://book.douban.com/subject/3002766/">英语词根与单词的说文解字</a></li>
@@ -386,7 +406,6 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/3288908/">集体智慧编程</a></li>
 <li><a href="https://book.douban.com/subject/10590856/">统计学习方法</a></li>
 <li><a href="https://book.douban.com/subject/26590145/">python黑帽子</a></li>
-<li><a href="https://book.douban.com/subject/1203426/">人间词话</a></li>
 <li><a href="https://book.douban.com/subject/5333562/">深入理解计算机系统（原书第2版）</a></li>
 <li><a href="https://book.douban.com/subject/20451827/">Web前端黑客技术揭秘</a></li>
 <li><a href="https://book.douban.com/subject/20419277/">西游记</a></li>
@@ -402,7 +421,7 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/1148282/">计算机程序的构造和解释</a></li>
 <li><a href="https://book.douban.com/subject/6558200/">离散数学及其应用（原书第6版）</a></li>
 <li><a href="https://book.douban.com/subject/1922246/">全球通史(下)</a></li>
-<li><a href="https://book.douban.com/subject/1922216/">全球通史</a></li>
+<li><a href="https://book.douban.com/subject/1922216/">全球通史(上)</a></li>
 <li><a href="https://book.douban.com/subject/1205778/">睡美人</a></li>
 <li><a href="https://book.douban.com/subject/1770782/">追风筝的人</a></li>
 <li><a href="https://book.douban.com/subject/10763170/">发条女孩</a></li>
@@ -412,11 +431,12 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/1424314/">1984</a></li>
 <li><a href="https://book.douban.com/subject/6859720/">实用Common Lisp编程</a></li>
 <li><a href="https://book.douban.com/subject/5936445/">伯里曼人体绘画技法</a></li>
-<li><a href="https://book.douban.com/subject/1013208/">如何阅读一本书</a></li>
 <li><a href="https://book.douban.com/subject/10455982/">什么是数学</a></li>
 </ul>
-<a class="header" href="print.html#想读" name="想读"><h3>想读</h3></a>
+<a class="header" href="print.html#想读" id="想读"><h3>想读</h3></a>
 <ul>
+<li><a href="https://book.douban.com/subject/1256826/">温暖的旅程</a></li>
+<li><a href="https://book.douban.com/subject/1002130/">他们曾使我空虚</a></li>
 <li><a href="https://book.douban.com/subject/11637344/">从一元一次方程到伽罗瓦理论</a></li>
 <li><a href="https://book.douban.com/subject/4937268/">并发的艺术</a></li>
 <li><a href="https://book.douban.com/subject/1459281/">The Practice of Programming</a></li>
@@ -471,7 +491,6 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/3285148/">Expert Python Programming</a></li>
 <li><a href="https://book.douban.com/subject/2208626/">代码大全</a></li>
 <li><a href="https://book.douban.com/subject/6811366/">禅与摩托车维修艺术</a></li>
-<li><a href="https://book.douban.com/subject/26295448/">你一生的故事</a></li>
 <li><a href="https://book.douban.com/subject/3558788/">卓有成效的程序员</a></li>
 <li><a href="https://book.douban.com/subject/25815142/">游戏引擎架构</a></li>
 <li><a href="https://book.douban.com/subject/25918026/">ARM Linux内核源码剖析</a></li>
@@ -503,7 +522,6 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/10779650/">追忆似水年华</a></li>
 <li><a href="https://book.douban.com/subject/2987699/">数学丑闻</a></li>
 <li><a href="https://book.douban.com/subject/24846072/">隐藏的现实</a></li>
-<li><a href="https://book.douban.com/subject/24882289/">机器人短篇全集</a></li>
 <li><a href="https://book.douban.com/subject/1399992/">天渊</a></li>
 <li><a href="https://book.douban.com/subject/3607222/">弗诺·文奇科幻小说集</a></li>
 <li><a href="https://book.douban.com/subject/1146267/">深渊上的火</a></li>
@@ -520,10 +538,8 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/3852290/">现代操作系统（第3版）</a></li>
 <li><a href="https://book.douban.com/subject/1052241/">设计模式</a></li>
 <li><a href="https://book.douban.com/subject/1088581/">浮生六记</a></li>
-<li><a href="https://book.douban.com/subject/1885170/">算法导论（原书第2版）</a></li>
 <li><a href="https://book.douban.com/subject/10546925/">白帽子讲Web安全</a></li>
 <li><a href="https://book.douban.com/subject/20492550/">清醒思考的艺术</a></li>
-<li><a href="https://book.douban.com/subject/3004255/">编程之美</a></li>
 <li><a href="https://book.douban.com/subject/1401841/">傲慢与偏见</a></li>
 <li><a href="https://book.douban.com/subject/1982116/">我与兰登书屋</a></li>
 <li><a href="https://book.douban.com/subject/4110139/">丁丁历险记</a></li>
@@ -536,7 +552,6 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/1047719/">傅雷家书</a></li>
 <li><a href="https://book.douban.com/subject/1007305/">红楼梦</a></li>
 <li><a href="https://book.douban.com/subject/1205372/">茶花女</a></li>
-<li><a href="https://book.douban.com/subject/1643566/">基督山伯爵</a></li>
 <li><a href="https://book.douban.com/subject/1026916/">芭巴拉少校</a></li>
 <li><a href="https://book.douban.com/subject/1115353/">奇特的一生</a></li>
 <li><a href="https://book.douban.com/subject/10746113/">HTTP权威指南</a></li>
@@ -549,7 +564,6 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/1134994/">编译原理</a></li>
 <li><a href="https://book.douban.com/subject/3296317/">编译原理</a></li>
 <li><a href="https://book.douban.com/subject/4199741/">代码整洁之道</a></li>
-<li><a href="https://book.douban.com/subject/2230248/">人月神话</a></li>
 <li><a href="https://book.douban.com/subject/10555435/">七周七语言</a></li>
 <li><a href="https://book.douban.com/subject/11637645/">雪莱诗选</a></li>
 <li><a href="https://book.douban.com/subject/20279665/">“太空漫游”四部曲</a></li>
@@ -568,7 +582,6 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/1451172/">Just for Fun</a></li>
 <li><a href="https://book.douban.com/subject/1858410/">万历十五年</a></li>
 <li><a href="https://book.douban.com/subject/1632977/">The Little Schemer - 4th Edition</a></li>
-<li><a href="https://book.douban.com/subject/24316255/">Go Web编程</a></li>
 <li><a href="https://book.douban.com/subject/1350063/">Life of Pi</a></li>
 <li><a href="https://book.douban.com/subject/25708714/">历史深处的忧虑</a></li>
 <li><a href="https://book.douban.com/subject/3344676/">常识</a></li>
@@ -585,18 +598,18 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 <li><a href="https://book.douban.com/subject/4124694/">龙与地下城4.0 地下城主指南</a></li>
 <li><a href="https://book.douban.com/subject/1456195/">V for Vendetta</a></li>
 </ul>
-<a class="header" href="print.html#about-me-" name="about-me-"><h2>About me :</h2></a>
+<a class="header" href="print.html#about-me-" id="about-me-"><h2>About me :</h2></a>
 <hr />
-<a class="header" href="print.html#nickname-" name="nickname-"><h3>Nickname :</h3></a>
+<a class="header" href="print.html#nickname-" id="nickname-"><h3>Nickname :</h3></a>
 <ul>
 <li>lightning1141</li>
 </ul>
-<a class="header" href="print.html#email-" name="email-"><h3>Email :</h3></a>
+<a class="header" href="print.html#email-" id="email-"><h3>Email :</h3></a>
 <ul>
 <li>Nickname @ gmail</li>
 <li>Nickname @ 163</li>
 </ul>
-<a class="header" href="print.html#个人说明" name="个人说明"><h3>个人说明:</h3></a>
+<a class="header" href="print.html#个人说明" id="个人说明"><h3>个人说明:</h3></a>
 <ul>
 <li>Advocating freedom</li>
 <li>To be a <a href="http://www.catb.org/%7Eesr/faqs/hacker-howto.html" title="How to become a hacker">Hacker</a></li>
@@ -627,6 +640,9 @@ fn get_choices(n: u64, x: u64) -&gt; u64 {
 
         <!-- Livereload script (if served using the cli tool) -->
         
+
+        
+
 
         <script src="highlight.js"></script>
         <script src="book.js"></script>

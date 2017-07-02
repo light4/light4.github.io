@@ -9,7 +9,8 @@
 
 
         <link rel="stylesheet" href="book.css">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
 
         <link rel="shortcut icon" href="favicon.png">
 
@@ -20,10 +21,10 @@
         <link rel="stylesheet" href="tomorrow-night.css">
 
         <!-- MathJax -->
-        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async='async'></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async="async"></script>
 
         <!-- Fetch JQuery from CDN but have a local fallback -->
-        <script src="https://code.jquery.com/jquery-2.1.4.min.js" async='async'></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js" async="async"></script>
     </head>
     <body class="light">
         <!-- Set the theme before any content is loaded, prevents flash -->
@@ -61,7 +62,7 @@
                 </div>
 
                 <div id="content" class="content">
-                    <a class="header" href="about/index.html#readings" name="readings"><h3>Readings</h3></a>
+                    <a class="header" href="about/index.html#readings" id="readings"><h3>Readings</h3></a>
 <ul>
 <li><a href="read/douban.html">豆瓣读书</a></li>
 <li>Python
@@ -83,11 +84,11 @@
 </ul>
 </li>
 </ul>
-<a class="header" href="about/index.html#training" name="training"><h3>Training</h3></a>
+<a class="header" href="about/index.html#training" id="training"><h3>Training</h3></a>
 <ul>
 <li><a href="https://www.codewars.com/users/lightning1141/"><img src="https://www.codewars.com/users/lightning1141/badges/small" alt="Codewars" /></a></li>
 </ul>
-<a class="header" href="about/index.html#works" name="works"><h3>Works</h3></a>
+<a class="header" href="about/index.html#works" id="works"><h3>Works</h3></a>
 <ul>
 <li>None
 <blockquote>
@@ -129,6 +130,9 @@
 
         <!-- Livereload script (if served using the cli tool) -->
         
+
+        
+
 
         <script src="highlight.js"></script>
         <script src="book.js"></script>
